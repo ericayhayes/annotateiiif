@@ -1,6 +1,6 @@
 title: Local Annotation Server
 description: "Local annotation server that allows for easy annotation creation."
-baseurl: "/annotate"
+baseurl: "/annotateiiif"
 
 markdown: kramdown
 permalink: pretty
@@ -24,7 +24,7 @@ collections:
   annotation_data:
     output: true
     permalink: /annotations/:name
-  custom_images: 
+  custom_images:
     metadata:
       source: 'objects.csv' # path to the metadata file, must be within '_data'
     images:
