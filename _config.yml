@@ -1,0 +1,55 @@
+title: Local Annotation Server
+description: "Local annotation server that allows for easy annotation creation."
+baseurl: "/annotate"
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+
+exclude: [Rakefile, Gemfile*, vendor, ENV, imported_roles]
+include: [feed.xml]
+
+theme: annotate-theme
+remote_theme: dnoneill/annotate-theme
+
+collections:
+  annotations:
+    output: true
+    permalink: /annotations/:name
+  ranges:
+    output: true
+    permalink: /ranges/:name
+  annotation_data:
+    output: true
+    permalink: /annotations/:name
+  custom_images: 
+    metadata:
+      source: 'objects.csv' # path to the metadata file, must be within '_data'
+    images:
+      source: 'custom' # path to the directory of source images, must be within '_data'
+
+webrick:
+  headers:
+    "Access-Control-Allow-Origin": "*"
+
+api_server: http://localhost:5000/
+endpoint: http://localhost:5000/write_annotation/
+
+lunr_settings:
+  collections: [annotation_data]
+  atozsortfield: slug
+  displayfields:
+    - {field: slug, headerfield: true, highlight: false}
+    - {field: imagescr, headerimage: true, highlight: false}
+  fields:
+  - boost: 10
+    jekyllfields: [content]
+    searchfield: content
+  - boost: 10
+    jekyllfields: [tags]
+    searchfield: tags
+    facetfield: true
+
+  fuzzysearchfields: [content]
