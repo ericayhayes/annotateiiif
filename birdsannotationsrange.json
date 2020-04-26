@@ -1,0 +1,19 @@
+{
+  "@id": "https://ericayhayes.github.io/annotateiiif/birdsannotationsrange.json",
+  "@type": "sc:Range",
+  "label": "Selections from John James Audubon's Birds of America at the Lilly Library",
+  "contentLayer": {
+    "otherContent": [
+      {
+        "@id": "https://ericayhayes.github.io/annotateiiif/annotations/obj1-list.json",
+        "description": "",
+        "label": "The Wild Turkey"
+      },
+      {
+        "@id": "https://ericayhayes.github.io/annotateiiif/annotations/obj2-list.json",
+        "description": "",
+        "label": "Great-footed Hawk"
+      }
+    ]
+  }
+}
