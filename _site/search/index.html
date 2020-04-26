@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  
+  
+
+
+
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-indigo.min.css" />
+  <link rel="stylesheet" href="//ncsu-libraries.github.io/annona/latest/annona.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script type="text/javascript" src="/annotateiiif/assets/js/local-functions.js"></script>
+  <script type="text/javascript" src="//ncsu-libraries.github.io/annona/latest/annona.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+  <link rel="stylesheet" href="/annotateiiif/assets/css/main.css">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Search Annotations | Local Annotation Server</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Search Annotations" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Local annotation server that allows for easy annotation creation." />
+<meta property="og:description" content="Local annotation server that allows for easy annotation creation." />
+<link rel="canonical" href="http://0.0.0.0:5555/annotateiiif/search/" />
+<meta property="og:url" content="http://0.0.0.0:5555/annotateiiif/search/" />
+<meta property="og:site_name" content="Local Annotation Server" />
+<script type="application/ld+json">
+{"headline":"Search Annotations","@type":"WebPage","url":"http://0.0.0.0:5555/annotateiiif/search/","description":"Local annotation server that allows for easy annotation creation.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+
+  
+
+</head>
+
+  <body>
+    
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">
+            <h1 id="page-title" class="mdl-typography--title">Search Annotations</h1>
+          </span>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          
+          <a id="site-title" href="http://0.0.0.0:5555/annotateiiif/">Local Annotation Server</a>
+        </span>
+
+        <nav class="mdl-navigation">
+          
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/">Create Annotations</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/imageditor/">Create annotations any image</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/annotations">List of Annotations</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/singlestoryboard">Single Storyboard Annotations</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/storyboard">Storyboard Annotations</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/ranges">List of Ranges</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent is-active" href="/annotateiiif/search/">Search Annotations</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div class="content">
+            <form role="search">
+<div class="search-control" style="display:none;">
+    <input type="search" id="person-serarch" name="query" placeholder="Keyword Search" aria-label="Search people using keyword" />
+    <input type="hidden" name="sort" value="datecreated___desc" />
+</div>
+</form>
+
+<script src="https://ncsu-libraries.github.io/annona/dist/annona.js"></script>
+
+<script src="https://dnoneill.github.io/jekyll-lunr-js-custom-search/dist/custom-search.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://dnoneill.github.io/jekyll-lunr-js-custom-search/dist/custom-search.css" />
+
+<div id="spinner"><i class="fa fa-spinner fa-spin"></i></div>
+
+<div id="header_info"></div>
+<div style="float: left; width: 20%; ">
+  <div id="facets">
+  </div>
+</div>
+<div style="float: left; width: 80%; display: none; border: 1px solid #ccc" class="all_results">
+  <div id="search_results">
+    <div id="searchInfo">
+      <span id="number_results"></span>
+      <span id="sort_by" class="dropdownsort"><label for="sortSelect">Sort By:</label>
+        <select id="sortSelect" name="sort" onchange="changeSort(event);">
+          <option value="">Relevance</option>
+          <option value="atoz">Name</option>
+          <option value="datecreated___desc">Date Created (Most Recent First)</option>
+          <option value="datemodified___desc">Date Modified (Most Recent First)</option>
+        </select>
+      </span>
+    </div>
+  </div>
+  <ul id="resultslist">
+  </ul>
+  <div id="pagination"></div>
+</div>
+<div style="clear:both"><span></span></div>
+
+<script>
+window.addEventListener("load", function(){
+    var dict = {settingsurl: "/annotateiiif/assets/js/index.js"}
+    loadsearchtemplate(dict)
+    $('#spinner').hide()
+});
+</script>
+
+
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p id="copyright">&copy; 2020 Local Annotation Server</p>
+
+      </footer>
+    </div>
+  </body>
+</html>

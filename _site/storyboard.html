@@ -1,0 +1,2471 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+  
+  
+
+
+
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-indigo.min.css" />
+  <link rel="stylesheet" href="//ncsu-libraries.github.io/annona/latest/annona.css">
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script type="text/javascript" src="/annotateiiif/assets/js/local-functions.js"></script>
+  <script type="text/javascript" src="//ncsu-libraries.github.io/annona/latest/annona.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+  <link rel="stylesheet" href="/annotateiiif/assets/css/main.css">
+
+  <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Storyboard Annotations | Local Annotation Server</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="Storyboard Annotations" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Local annotation server that allows for easy annotation creation." />
+<meta property="og:description" content="Local annotation server that allows for easy annotation creation." />
+<link rel="canonical" href="http://0.0.0.0:5555/annotateiiif/storyboard" />
+<meta property="og:url" content="http://0.0.0.0:5555/annotateiiif/storyboard" />
+<meta property="og:site_name" content="Local Annotation Server" />
+<script type="application/ld+json">
+{"headline":"Storyboard Annotations","@type":"WebPage","url":"http://0.0.0.0:5555/annotateiiif/storyboard","description":"Local annotation server that allows for easy annotation creation.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+
+  
+
+</head>
+
+  <body>
+    
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">
+            <h1 id="page-title" class="mdl-typography--title">Storyboard Annotations</h1>
+          </span>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">
+          
+          <a id="site-title" href="http://0.0.0.0:5555/annotateiiif/">Local Annotation Server</a>
+        </span>
+
+        <nav class="mdl-navigation">
+          
+
+
+  
+    
+  
+
+  
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/">Create Annotations</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/imageditor/">Create annotations any image</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/annotations">List of Annotations</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/singlestoryboard">Single Storyboard Annotations</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent is-active" href="/annotateiiif/storyboard">Storyboard Annotations</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/ranges">List of Ranges</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+  
+    
+      
+        <a class="mdl-navigation__link parent" href="/annotateiiif/search/">Search Annotations</a>
+        
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+            
+              
+                
+              
+            
+          
+        
+      
+    
+  
+
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div class="content">
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj1-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj1-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj1-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj1-list_button" class="listbutton" onclick="make_embed_code('obj1-list')">Show embed code</button>
+  <div id="obj1-list_embeditem" style="display: none;">
+    <textarea id="obj1-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj1-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj1-list_embedcode')" onmouseout="outFunc('obj1-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj1-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj10-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj10-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj10-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj10-list_button" class="listbutton" onclick="make_embed_code('obj10-list')">Show embed code</button>
+  <div id="obj10-list_embeditem" style="display: none;">
+    <textarea id="obj10-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj10-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj10-list_embedcode')" onmouseout="outFunc('obj10-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj10-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj11-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj11-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj11-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj11-list_button" class="listbutton" onclick="make_embed_code('obj11-list')">Show embed code</button>
+  <div id="obj11-list_embeditem" style="display: none;">
+    <textarea id="obj11-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj11-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj11-list_embedcode')" onmouseout="outFunc('obj11-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj11-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj12-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj12-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj12-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj12-list_button" class="listbutton" onclick="make_embed_code('obj12-list')">Show embed code</button>
+  <div id="obj12-list_embeditem" style="display: none;">
+    <textarea id="obj12-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj12-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj12-list_embedcode')" onmouseout="outFunc('obj12-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj12-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj13-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj13-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj13-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj13-list_button" class="listbutton" onclick="make_embed_code('obj13-list')">Show embed code</button>
+  <div id="obj13-list_embeditem" style="display: none;">
+    <textarea id="obj13-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj13-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj13-list_embedcode')" onmouseout="outFunc('obj13-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj13-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj14-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj14-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj14-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj14-list_button" class="listbutton" onclick="make_embed_code('obj14-list')">Show embed code</button>
+  <div id="obj14-list_embeditem" style="display: none;">
+    <textarea id="obj14-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj14-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj14-list_embedcode')" onmouseout="outFunc('obj14-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj14-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj15-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj15-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj15-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj15-list_button" class="listbutton" onclick="make_embed_code('obj15-list')">Show embed code</button>
+  <div id="obj15-list_embeditem" style="display: none;">
+    <textarea id="obj15-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj15-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj15-list_embedcode')" onmouseout="outFunc('obj15-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj15-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj16-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj16-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj16-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj16-list_button" class="listbutton" onclick="make_embed_code('obj16-list')">Show embed code</button>
+  <div id="obj16-list_embeditem" style="display: none;">
+    <textarea id="obj16-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj16-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj16-list_embedcode')" onmouseout="outFunc('obj16-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj16-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj17-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj17-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj17-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj17-list_button" class="listbutton" onclick="make_embed_code('obj17-list')">Show embed code</button>
+  <div id="obj17-list_embeditem" style="display: none;">
+    <textarea id="obj17-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj17-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj17-list_embedcode')" onmouseout="outFunc('obj17-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj17-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj18-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj18-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj18-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj18-list_button" class="listbutton" onclick="make_embed_code('obj18-list')">Show embed code</button>
+  <div id="obj18-list_embeditem" style="display: none;">
+    <textarea id="obj18-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj18-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj18-list_embedcode')" onmouseout="outFunc('obj18-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj18-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj19-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj19-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj19-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj19-list_button" class="listbutton" onclick="make_embed_code('obj19-list')">Show embed code</button>
+  <div id="obj19-list_embeditem" style="display: none;">
+    <textarea id="obj19-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj19-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj19-list_embedcode')" onmouseout="outFunc('obj19-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj19-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj2-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj2-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj2-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj2-list_button" class="listbutton" onclick="make_embed_code('obj2-list')">Show embed code</button>
+  <div id="obj2-list_embeditem" style="display: none;">
+    <textarea id="obj2-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj2-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj2-list_embedcode')" onmouseout="outFunc('obj2-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj2-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj20-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj20-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj20-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj20-list_button" class="listbutton" onclick="make_embed_code('obj20-list')">Show embed code</button>
+  <div id="obj20-list_embeditem" style="display: none;">
+    <textarea id="obj20-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj20-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj20-list_embedcode')" onmouseout="outFunc('obj20-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj20-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj21-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj21-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj21-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj21-list_button" class="listbutton" onclick="make_embed_code('obj21-list')">Show embed code</button>
+  <div id="obj21-list_embeditem" style="display: none;">
+    <textarea id="obj21-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj21-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj21-list_embedcode')" onmouseout="outFunc('obj21-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj21-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj22-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj22-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj22-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj22-list_button" class="listbutton" onclick="make_embed_code('obj22-list')">Show embed code</button>
+  <div id="obj22-list_embeditem" style="display: none;">
+    <textarea id="obj22-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj22-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj22-list_embedcode')" onmouseout="outFunc('obj22-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj22-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj23-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj23-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj23-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj23-list_button" class="listbutton" onclick="make_embed_code('obj23-list')">Show embed code</button>
+  <div id="obj23-list_embeditem" style="display: none;">
+    <textarea id="obj23-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj23-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj23-list_embedcode')" onmouseout="outFunc('obj23-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj23-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj24-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj24-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj24-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj24-list_button" class="listbutton" onclick="make_embed_code('obj24-list')">Show embed code</button>
+  <div id="obj24-list_embeditem" style="display: none;">
+    <textarea id="obj24-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj24-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj24-list_embedcode')" onmouseout="outFunc('obj24-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj24-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj25-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj25-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj25-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj25-list_button" class="listbutton" onclick="make_embed_code('obj25-list')">Show embed code</button>
+  <div id="obj25-list_embeditem" style="display: none;">
+    <textarea id="obj25-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj25-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj25-list_embedcode')" onmouseout="outFunc('obj25-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj25-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj26-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj26-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj26-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj26-list_button" class="listbutton" onclick="make_embed_code('obj26-list')">Show embed code</button>
+  <div id="obj26-list_embeditem" style="display: none;">
+    <textarea id="obj26-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj26-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj26-list_embedcode')" onmouseout="outFunc('obj26-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj26-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj27-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj27-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj27-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj27-list_button" class="listbutton" onclick="make_embed_code('obj27-list')">Show embed code</button>
+  <div id="obj27-list_embeditem" style="display: none;">
+    <textarea id="obj27-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj27-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj27-list_embedcode')" onmouseout="outFunc('obj27-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj27-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj28-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj28-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj28-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj28-list_button" class="listbutton" onclick="make_embed_code('obj28-list')">Show embed code</button>
+  <div id="obj28-list_embeditem" style="display: none;">
+    <textarea id="obj28-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj28-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj28-list_embedcode')" onmouseout="outFunc('obj28-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj28-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj29-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj29-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj29-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj29-list_button" class="listbutton" onclick="make_embed_code('obj29-list')">Show embed code</button>
+  <div id="obj29-list_embeditem" style="display: none;">
+    <textarea id="obj29-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj29-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj29-list_embedcode')" onmouseout="outFunc('obj29-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj29-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj3-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj3-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj3-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj3-list_button" class="listbutton" onclick="make_embed_code('obj3-list')">Show embed code</button>
+  <div id="obj3-list_embeditem" style="display: none;">
+    <textarea id="obj3-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj3-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj3-list_embedcode')" onmouseout="outFunc('obj3-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj3-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj30-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj30-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj30-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj30-list_button" class="listbutton" onclick="make_embed_code('obj30-list')">Show embed code</button>
+  <div id="obj30-list_embeditem" style="display: none;">
+    <textarea id="obj30-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj30-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj30-list_embedcode')" onmouseout="outFunc('obj30-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj30-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj31-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj31-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj31-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj31-list_button" class="listbutton" onclick="make_embed_code('obj31-list')">Show embed code</button>
+  <div id="obj31-list_embeditem" style="display: none;">
+    <textarea id="obj31-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj31-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj31-list_embedcode')" onmouseout="outFunc('obj31-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj31-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj32-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj32-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj32-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj32-list_button" class="listbutton" onclick="make_embed_code('obj32-list')">Show embed code</button>
+  <div id="obj32-list_embeditem" style="display: none;">
+    <textarea id="obj32-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj32-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj32-list_embedcode')" onmouseout="outFunc('obj32-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj32-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj33-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj33-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj33-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj33-list_button" class="listbutton" onclick="make_embed_code('obj33-list')">Show embed code</button>
+  <div id="obj33-list_embeditem" style="display: none;">
+    <textarea id="obj33-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj33-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj33-list_embedcode')" onmouseout="outFunc('obj33-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj33-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj34-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj34-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj34-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj34-list_button" class="listbutton" onclick="make_embed_code('obj34-list')">Show embed code</button>
+  <div id="obj34-list_embeditem" style="display: none;">
+    <textarea id="obj34-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj34-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj34-list_embedcode')" onmouseout="outFunc('obj34-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj34-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj35-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj35-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj35-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj35-list_button" class="listbutton" onclick="make_embed_code('obj35-list')">Show embed code</button>
+  <div id="obj35-list_embeditem" style="display: none;">
+    <textarea id="obj35-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj35-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj35-list_embedcode')" onmouseout="outFunc('obj35-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj35-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj36-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj36-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj36-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj36-list_button" class="listbutton" onclick="make_embed_code('obj36-list')">Show embed code</button>
+  <div id="obj36-list_embeditem" style="display: none;">
+    <textarea id="obj36-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj36-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj36-list_embedcode')" onmouseout="outFunc('obj36-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj36-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj37-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj37-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj37-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj37-list_button" class="listbutton" onclick="make_embed_code('obj37-list')">Show embed code</button>
+  <div id="obj37-list_embeditem" style="display: none;">
+    <textarea id="obj37-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj37-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj37-list_embedcode')" onmouseout="outFunc('obj37-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj37-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj38-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj38-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj38-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj38-list_button" class="listbutton" onclick="make_embed_code('obj38-list')">Show embed code</button>
+  <div id="obj38-list_embeditem" style="display: none;">
+    <textarea id="obj38-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj38-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj38-list_embedcode')" onmouseout="outFunc('obj38-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj38-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj39-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj39-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj39-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj39-list_button" class="listbutton" onclick="make_embed_code('obj39-list')">Show embed code</button>
+  <div id="obj39-list_embeditem" style="display: none;">
+    <textarea id="obj39-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj39-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj39-list_embedcode')" onmouseout="outFunc('obj39-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj39-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj4-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj4-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj4-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj4-list_button" class="listbutton" onclick="make_embed_code('obj4-list')">Show embed code</button>
+  <div id="obj4-list_embeditem" style="display: none;">
+    <textarea id="obj4-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj4-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj4-list_embedcode')" onmouseout="outFunc('obj4-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj4-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj40-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj40-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj40-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj40-list_button" class="listbutton" onclick="make_embed_code('obj40-list')">Show embed code</button>
+  <div id="obj40-list_embeditem" style="display: none;">
+    <textarea id="obj40-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj40-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj40-list_embedcode')" onmouseout="outFunc('obj40-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj40-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj41-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj41-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj41-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj41-list_button" class="listbutton" onclick="make_embed_code('obj41-list')">Show embed code</button>
+  <div id="obj41-list_embeditem" style="display: none;">
+    <textarea id="obj41-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj41-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj41-list_embedcode')" onmouseout="outFunc('obj41-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj41-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj42-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj42-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj42-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj42-list_button" class="listbutton" onclick="make_embed_code('obj42-list')">Show embed code</button>
+  <div id="obj42-list_embeditem" style="display: none;">
+    <textarea id="obj42-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj42-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj42-list_embedcode')" onmouseout="outFunc('obj42-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj42-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj43-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj43-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj43-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj43-list_button" class="listbutton" onclick="make_embed_code('obj43-list')">Show embed code</button>
+  <div id="obj43-list_embeditem" style="display: none;">
+    <textarea id="obj43-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj43-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj43-list_embedcode')" onmouseout="outFunc('obj43-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj43-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj44-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj44-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj44-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj44-list_button" class="listbutton" onclick="make_embed_code('obj44-list')">Show embed code</button>
+  <div id="obj44-list_embeditem" style="display: none;">
+    <textarea id="obj44-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj44-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj44-list_embedcode')" onmouseout="outFunc('obj44-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj44-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj45-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj45-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj45-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj45-list_button" class="listbutton" onclick="make_embed_code('obj45-list')">Show embed code</button>
+  <div id="obj45-list_embeditem" style="display: none;">
+    <textarea id="obj45-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj45-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj45-list_embedcode')" onmouseout="outFunc('obj45-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj45-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj46-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj46-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj46-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj46-list_button" class="listbutton" onclick="make_embed_code('obj46-list')">Show embed code</button>
+  <div id="obj46-list_embeditem" style="display: none;">
+    <textarea id="obj46-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj46-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj46-list_embedcode')" onmouseout="outFunc('obj46-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj46-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj47-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj47-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj47-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj47-list_button" class="listbutton" onclick="make_embed_code('obj47-list')">Show embed code</button>
+  <div id="obj47-list_embeditem" style="display: none;">
+    <textarea id="obj47-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj47-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj47-list_embedcode')" onmouseout="outFunc('obj47-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj47-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj48-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj48-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj48-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj48-list_button" class="listbutton" onclick="make_embed_code('obj48-list')">Show embed code</button>
+  <div id="obj48-list_embeditem" style="display: none;">
+    <textarea id="obj48-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj48-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj48-list_embedcode')" onmouseout="outFunc('obj48-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj48-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj49-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj49-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj49-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj49-list_button" class="listbutton" onclick="make_embed_code('obj49-list')">Show embed code</button>
+  <div id="obj49-list_embeditem" style="display: none;">
+    <textarea id="obj49-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj49-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj49-list_embedcode')" onmouseout="outFunc('obj49-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj49-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj5-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj5-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj5-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj5-list_button" class="listbutton" onclick="make_embed_code('obj5-list')">Show embed code</button>
+  <div id="obj5-list_embeditem" style="display: none;">
+    <textarea id="obj5-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj5-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj5-list_embedcode')" onmouseout="outFunc('obj5-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj5-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj50-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj50-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj50-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj50-list_button" class="listbutton" onclick="make_embed_code('obj50-list')">Show embed code</button>
+  <div id="obj50-list_embeditem" style="display: none;">
+    <textarea id="obj50-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj50-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj50-list_embedcode')" onmouseout="outFunc('obj50-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj50-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj6-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj6-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj6-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj6-list_button" class="listbutton" onclick="make_embed_code('obj6-list')">Show embed code</button>
+  <div id="obj6-list_embeditem" style="display: none;">
+    <textarea id="obj6-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj6-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj6-list_embedcode')" onmouseout="outFunc('obj6-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj6-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj7-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj7-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj7-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj7-list_button" class="listbutton" onclick="make_embed_code('obj7-list')">Show embed code</button>
+  <div id="obj7-list_embeditem" style="display: none;">
+    <textarea id="obj7-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj7-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj7-list_embedcode')" onmouseout="outFunc('obj7-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj7-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj8-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj8-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj8-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj8-list_button" class="listbutton" onclick="make_embed_code('obj8-list')">Show embed code</button>
+  <div id="obj8-list_embeditem" style="display: none;">
+    <textarea id="obj8-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj8-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj8-list_embedcode')" onmouseout="outFunc('obj8-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj8-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <div class="row">
+
+
+	<div class="column anno_left">
+		<iiif-storyboard annotationlist="/annotateiiif/annotations/obj9-list.json"></iiif-storyboard>
+	</div>
+<div class="column anno_right">
+	
+  <a class="listbutton" target="_blank" href="https://peaceful-depths-13455.herokuapp.com/annoeditor/render_anno?annotationurl=http://0.0.0.0:5555/annotateiiif/annotations/obj9-list.json&endpoint=http://localhost:5000/write_annotation/">Edit</a>
+  <a class="listbutton" target="_blank" href="https://ncsu-libraries.github.io/annona/tag-builder/#/?url=http://0.0.0.0:5555/annotateiiif/annotations/obj9-list.json&viewtype=iiif-storyboard&listtype=annotationlist">Tag Builder</a>
+	<button id="obj9-list_button" class="listbutton" onclick="make_embed_code('obj9-list')">Show embed code</button>
+  <div id="obj9-list_embeditem" style="display: none;">
+    <textarea id="obj9-list_embedcode" rows="5">&lt;iiif-storyboard annotationlist="http://0.0.0.0:5555/annotateiiif/annotations/obj9-list.json"&gt;&lt;/iiif-storyboard&gt;</textarea>
+    <button onclick="copytoclipboard('obj9-list_embedcode')" onmouseout="outFunc('obj9-list_tooltip')" class="tooltip copybutton">
+    <span class="tooltiptext" id="obj9-list_tooltip">Copy to clipboard</span>
+      <i class="fas fa-copy"></i>
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+          </div>
+        </div>
+      </main>
+      <footer>
+        <p id="copyright">&copy; 2020 Local Annotation Server</p>
+
+      </footer>
+    </div>
+  </body>
+</html>
